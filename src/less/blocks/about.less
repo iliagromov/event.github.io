@@ -1,0 +1,111 @@
+.about{
+    &-block{
+        .row-flex();
+
+        padding-top: 15%;
+
+        &__text{
+            .col();
+            .size(6);
+            .size-sm(12);
+            .sm-block({
+                text-align: center;
+                margin-bottom: 20px;
+                .page__btn{
+                   margin: 0 auto;
+                }
+            });
+            .page__text{
+                padding-bottom: 20px;
+                color: #666666;
+            }
+            .page__btn{
+                .size(6);
+                .size-xs(12);
+            }
+
+            &_fadeInLeft{
+                .animated({
+                    .fadeInLeft();
+                });
+            }
+        }
+
+        &__info{
+            .col();
+            .shift-left(1);
+            .shift-sm-left(0);
+            .size(5);
+            .size-sm(12);
+
+            background: @color_gray;
+            
+        }
+
+        &-info-contacts{
+            padding-top: 40px;
+            &__geo,
+            &__date,
+            &__speaker,
+            &__sponsor{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 0px 30px 30px;
+
+                .sm-block({
+                    justify-content: center;
+                    text-align: center;
+                });
+
+                &::before{
+                    content: "";
+                    margin: 0 8px 0 0;
+                }
+                &-name,
+                &-name-detail{
+                    letter-spacing: 1px;
+                    line-height: 30px;
+                }
+                &-name{
+                    color: #444444;
+                    font-size: 20px;
+                    font-family: '@{PTSans}-Bold';
+                    &-detail{
+                        font-size: 16px;
+                        color: #888888;
+                        width: 100%;
+                    }  
+                }
+            }
+
+            &__geo{
+               
+                &::before{
+                    .sprite(@icon-mark-map);
+                }
+            }
+
+            &__date{
+                &::before{
+                    .sprite(@icon-celender-orange);
+                }
+            }
+
+            &__speaker{
+                &::before{
+                    .sprite(@icon-microfon);
+                }
+            }
+
+            &__sponsor{
+                &::before{
+                    .sprite(@icon-manplus);
+                }
+            }
+
+        }
+    }
+
+    
+}

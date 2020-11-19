@@ -1,0 +1,37 @@
+.header{
+    .row-flex();
+    color: @color_white;
+    align-items: center;
+    &-logo{
+        .col();
+        .size(6);
+        
+        display: flex;
+        align-items: center;
+        &__icon{
+          .sprite(@icon-celender);
+        }
+        &__text{
+            font-family: '@{PTSans}-Bold';
+            margin-left: 10px;
+            font-size: 25px;
+        }
+    }
+    &-social{
+        .col();
+        .size(6);
+        
+        .social{
+            justify-content: flex-end;
+            &__icon{
+                filter: invert(1);
+            }
+        }
+    }
+    &-block{
+        position: fixed;
+        width: 100%;
+        padding: 8px 0px;
+        z-index: 1;
+    }
+}

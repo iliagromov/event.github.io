@@ -1,0 +1,45 @@
+@import '../fonts/fonts.less';
+.reset();
+
+.wrapper{
+    .wrapper();
+}
+
+.scrollbar(@color_scrollbar-track, @color_violet);
+
+@font-face {
+  .font(@font; @fontRegular);
+}
+
+@font-face {
+  .font(@PTSans; '@{PTSans}-Bold');
+}
+html{
+  // scroll-behavior: smooth;
+}
+html:not([data-scroll='0']) header {
+  background: rgba(2, 2, 2, 0.4);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  .md(display, none);
+}
+
+body {
+  font-family: @fontRegular;
+}
+a, button{
+  cursor: pointer;
+  &:focus{
+      outline: none;
+  }
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+input{
+  cursor: text;
+  &:focus{
+      outline: none;
+  }
+}

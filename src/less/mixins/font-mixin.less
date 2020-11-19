@@ -1,0 +1,12 @@
+.font(@font; @fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+    
+    font-family: '@{fontName}';
+    // src: url('../fonts/@{font}/@{urlName}.eot');
+	src:
+	    //  url('../fonts/@{font}/@{urlName}.eot?#iefix') format('embedded-opentype'),
+	    //  url('../fonts/@{font}/@{urlName}.woff') format('woff'),
+	     url('../fonts/@{font}/@{urlName}.ttf') format('truetype');
+	    //  url('../fonts/@{font}/@{urlName}.svg#@{urlName}') format('svg');
+    font-weight: @weight;
+    font-style: @style;
+}

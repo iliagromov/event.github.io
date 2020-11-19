@@ -1,0 +1,36 @@
+mixin SelectBox(name, options)
+  .select-box
+    .select-box__current(tabindex="1")
+      each option, index in options
+        .select-box__value
+          input.select-box__input(type="radio" id=index value=option.value name=name checked)
+          p.select-box__input-text #{option.name}
+      .select-box__icon
+    ul.select-box__list
+      each option, index in options
+        li
+          label.select-box__option(for=index aria-hidden) #{option.name}
+        
+
+
+section#callback-form.callback
+    .wrapper
+        .callback-block
+            .page__img
+                img(src="assets/img/img-girl.jpg")
+            .callback-block__text
+                h2.page__title-h2 Register Your Attendance Todays
+                .page__text Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite det un nov lingua francal On refusa continuar payar custosive li traductores.
+                form.page__form(action="")
+                    input.page__input(type="text" name="userName"  placeholder='Full Name*' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'" required)
+                    input.page__input(type='email' name="e-mail" placeholder='Email Address' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'")
+                    input.page__input(type='tel' name="phone" placeholder='Phone Number*' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number*'" )
+                    +SelectBox('Ben', [
+                        {name: 'Cream', value: '1'}, 
+                        {name: 'Cheese', value: '2'}, 
+                        {name: 'Milk', value: '3'}, 
+                        {name: 'Honey', value: '4'}, 
+                        {name: 'Toast', value: '5'}
+                        ])
+
+                    button.page__btn Register now
